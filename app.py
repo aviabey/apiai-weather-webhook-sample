@@ -15,6 +15,11 @@ from flask import Flask
 from flask import request
 from flask import make_response
 
+import PIL
+from PIL import Image
+from PIL import ImageFont
+from PIL import ImageDraw
+
 # Flask app should start in global layout
 app = Flask(__name__)
 
@@ -98,6 +103,14 @@ def makeWebhookResult(data):
         "source": "apiai-weather-webhook-sample"
     }
 
+def makeimage(numindex):
+    font = ImageFont.truetype("adventpro-regular.ttf", 25)
+    img = Image.new("RGBA", (200,200), (120,20,20))
+    draw = ImageDraw.Draw(img)
+    draw.text((0,0), "This is a test", (255,255,0), font=font)
+    draw = ImageDraw.Draw(img)
+    img.save("a_test.png")
+    return res
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
