@@ -45,6 +45,7 @@ def processRequest(req):
         return {}
     #baseurl = "https://query.yahooapis.com/v1/public/yql?"
     yql_query = makeYqlQuery(req)
+    numindex= makeimage(1)
     #if yql_query is None:
         #return {}
     #yql_url = baseurl + urlencode({'q': yql_query}) + "&format=json"
@@ -115,7 +116,7 @@ def makeimage(numindex):
     draw.text((0,0), "This is a test", (255,255,0), font=font)
     draw = ImageDraw.Draw(img)
     img.save("a_test.png")
-    return res
+    return numindex
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
