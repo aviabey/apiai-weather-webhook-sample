@@ -60,6 +60,7 @@ def makeYqlQuery(req):
         #return None
     age = int(age)
     age -= 8
+    age = str(age)
     #return "select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "')"
     return age
 
