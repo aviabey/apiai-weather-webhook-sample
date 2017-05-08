@@ -15,6 +15,11 @@ from flask import Flask
 from flask import request
 from flask import make_response
 
+import PIL
+from PIL import Image
+from PIL import ImageFont
+from PIL import ImageDraw
+
 # Flask app should start in global layout
 app = Flask(__name__)
 
