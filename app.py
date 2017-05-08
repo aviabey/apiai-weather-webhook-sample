@@ -59,8 +59,9 @@ def makeYqlQuery(req):
     #if city is None:
         #return None
     age = int(age)
+    age -= 8
     #return "select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='" + city + "')"
-    return age-8
+    return age
 
 def makeWebhookResult(data):
     #query = data.get('query')
