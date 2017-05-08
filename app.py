@@ -15,10 +15,10 @@ from flask import Flask
 from flask import request
 from flask import make_response
 
-import PIL
-from PIL import Image
-from PIL import ImageFont
-from PIL import ImageDraw
+#import PIL
+# PIL import Image
+# PIL import ImageFont
+#from PIL import ImageDraw
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -45,7 +45,7 @@ def processRequest(req):
         return {}
     #baseurl = "https://query.yahooapis.com/v1/public/yql?"
     yql_query = makeYqlQuery(req)
-    numindex= makeimage(1)
+    #numindex= makeimage(1)
     #if yql_query is None:
         #return {}
     #yql_url = baseurl + urlencode({'q': yql_query}) + "&format=json"
